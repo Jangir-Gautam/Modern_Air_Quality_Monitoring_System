@@ -1,0 +1,395 @@
+.homePageChild {
+  width: 1512px;
+  height: 982px;
+  position: relative;
+  background-color: var(--color-gainsboro);
+  display: none;
+  max-width: 100%;
+  z-index: 0;
+}
+.planetEarthLogoChild,
+.rectangleIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.rectangleIcon {
+  margin: 0 !important;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+.planetEarthLogoChild {
+  border-radius: 50%;
+  background-color: var(--color-seagreen-200);
+  filter: blur(200px);
+  z-index: 1;
+}
+.planetEarthWithPlantLogoDIcon {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 157px;
+  height: 136px;
+  object-fit: cover;
+  z-index: 3;
+}
+.planetEarthLogo {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  margin: 0 !important;
+  top: -201px;
+  left: -93px;
+}
+.onYourEnvironment,
+.plantsMakeA {
+  margin: 0;
+}
+.plantsMakeAContainer {
+  margin: 0;
+  height: 217px;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 3;
+}
+.frameWrapper,
+.planetEarthLogoParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.planetEarthLogoParent {
+  flex: 1;
+  position: relative;
+}
+.frameWrapper {
+  width: 683px;
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+.provideYourHouse {
+  height: 122px;
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 4;
+}
+.leafImages,
+.leafImages1 {
+  position: absolute;
+  top: 118px;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-seagreen-200);
+  filter: blur(200px);
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+}
+.leafImages1 {
+  top: 268px;
+  left: 536px;
+  background-color: var(--color-sandybrown);
+}
+.leafPlantLeavesFlowerPngFIcon {
+  position: absolute;
+  top: 170px;
+  left: 263px;
+  width: 600.3px;
+  height: 450.5px;
+  object-fit: contain;
+  z-index: 3;
+}
+.istockphoto1180581523612x612Icon,
+.leafPlantLeavesFlowerPngFIcon1 {
+  position: absolute;
+  top: 33px;
+  left: 306px;
+  width: 552px;
+  height: 452px;
+  object-fit: cover;
+  z-index: 4;
+}
+.istockphoto1180581523612x612Icon {
+  top: 400px;
+  left: -70px;
+  width: 500px;
+  height: 436px;
+  z-index: 6;
+}
+.istockphoto1180581523612x612Icon1 {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  width: 686.6px;
+  height: 605.3px;
+  object-fit: contain;
+  z-index: 5;
+}
+.wrapperLine1,
+.wrapperLine1Child {
+  position: absolute;
+  left: 0;
+  z-index: 7;
+}
+.wrapperLine1Child {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  top: 4px;
+  transform: scale(1.985);
+}
+.wrapperLine1 {
+  top: 383.5px;
+  width: 50px;
+  height: 13.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.istockphoto1180581523612x612Parent {
+  position: absolute;
+  top: 405px;
+  left: 92px;
+  width: 700.6px;
+  height: 429px;
+}
+.leafImagesParent {
+  height: 834px;
+  width: 848px;
+  position: absolute;
+  margin: 0 !important;
+  right: -648px;
+  bottom: -514px;
+}
+.frameParent,
+.provideYourHouseOfficeSpParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.provideYourHouseOfficeSpParent {
+  align-self: stretch;
+  flex-direction: row;
+  position: relative;
+  margin-top: -72px;
+  font-size: 28px;
+}
+.frameParent {
+  width: 773px;
+  flex-direction: column;
+}
+.frameChild {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  margin: 0 !important;
+  right: -170px;
+  bottom: -232px;
+  border-radius: 50%;
+  background-color: var(--color-sandybrown);
+  filter: blur(200px);
+  z-index: 1;
+}
+.frameItem {
+  height: 74px;
+  width: 224px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-seagreen-100);
+  box-shadow: 10px 10px 100px #318162;
+  display: none;
+}
+.bookNow {
+  height: 33px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  font-family: var(--font-nunito);
+  color: #fef8f0;
+  text-align: left;
+  min-width: 116px;
+  z-index: 4;
+}
+.ellipseParent,
+.rectangleParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.rectangleParent {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-xl) 54px 21px;
+  background-color: var(--color-seagreen-100);
+  flex: 1;
+  border-radius: var(--br-31xl);
+  box-shadow: 10px 10px 100px #318162;
+  white-space: nowrap;
+  z-index: 3;
+}
+.rectangleParent:hover {
+  background-color: #57a887;
+}
+.ellipseParent {
+  width: 224px;
+  position: relative;
+}
+.knowMore {
+  height: 33px;
+  position: relative;
+  display: inline-block;
+  min-width: 128px;
+  z-index: 3;
+}
+.frameContainer,
+.freeTrialOffer {
+  display: flex;
+  align-items: flex-start;
+}
+.freeTrialOffer {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 0 0;
+}
+.frameContainer {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+.youWillGet {
+  width: 276px;
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-darkslategray);
+  display: inline-block;
+  z-index: 3;
+}
+.frameGroup,
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameGroup {
+  width: 458px;
+  gap: 27px;
+  max-width: 100%;
+  font-size: var(--font-size-5xl);
+  color: #000;
+}
+.homePage {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gainsboro);
+  overflow: hidden;
+  padding: 201px 91px 369px;
+  box-sizing: border-box;
+  gap: 17px;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: 48px;
+  color: var(--color-darkslategray);
+  font-family: var(--font-nunito);
+}
+/* @media screen and (max-width: 975px) {
+  .homePage {
+    padding-left: var(--padding-26xl);
+    padding-right: var(--padding-26xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 950px) {
+  .plantsMakeAContainer {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .homePage {
+    padding-left: var(--padding-3xl);
+    padding-right: var(--padding-3xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .plantsMakeAContainer {
+    font-size: 29px;
+  }
+  .provideYourHouse {
+    font-size: 22px;
+  }
+  .knowMore {
+    font-size: 19px;
+  }
+  .frameContainer {
+    flex-wrap: wrap;
+  }
+} */
+
+.bg {
+  background-image: linear-gradient(to right, rgb(21 128 61), rgb(255 255 255));
+  min-height: 100vh;
+}
+
+.sign-up-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50px; /* Adjust the left distance as needed */
+  top: 50%; /* Align vertically in the middle */
+  transform: translateY(-50%); /* Adjust for vertical alignment */
+}
+
+.title {
+  text-align: center;
+}
+
+.sign-up-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: rgb(21, 128, 61); /* Same color as the login button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(17, 102, 48); /* Same hover color as the login button */
+}

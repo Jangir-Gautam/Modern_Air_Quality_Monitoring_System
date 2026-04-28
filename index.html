@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Quality Monitoring System</title>
+  
+  <!-- Google Fonts: Poppins for that clean app look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode"> <!-- Default to light mode based on user reference -->
+
+  <!-- Authentication View -->
+  <div id="auth-view" class="view active">
+    <div class="auth-panel">
+      <div class="auth-header">
+        <div class="icon-circle">
+          <i class="fa-solid fa-wind"></i>
+        </div>
+        <h2>Welcome</h2>
+        <p>Your Smart Environment</p>
+      </div>
+      <form id="login-form">
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="username-input" placeholder="Name (e.g. George)" required>
+        </div>
+        <button type="submit" class="btn primary-btn">Log In</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dashboard View -->
+  <div id="dashboard-view" class="view hidden">
+    
+    <!-- Top Navigation -->
+    <nav class="app-navbar">
+      <button class="icon-btn menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      
+      <div class="nav-right">
+        <!-- Theme Toggle -->
+        <label class="theme-switch" title="Toggle Theme">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider round">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </span>
+        </label>
+        
+        <div class="user-avatar">
+          <img src="https://ui-avatars.com/api/?name=User&background=random&color=fff" id="avatar-img" alt="User">
+        </div>
+      </div>
+    </nav>
+
+    <main class="dashboard-container">
+      
+      <!-- Greeting Section -->
+      <header class="greeting-header">
+        <h1>Hi <span id="user-display">George</span> 👋</h1>
+        <p>Welcome to Your Smart Environment</p>
+      </header>
+
+      <!-- Horizontal Rooms/Zones (Visual only for now) -->
+      <div class="zones-scroll">
+        <div class="zone-item active">
+          <div class="zone-icon"><i class="fa-solid fa-couch"></i></div>
+          <span>Living room</span>
+        </div>
+        <div class="zone-item">
+          <div class="zone-icon"><i class="fa-solid fa-bed"></i></div>
+          <span>Bedroom</span>
+        </div>
+        <div class="zone-item">
+          <div class="zone-icon"><i class="fa-solid fa-utensils"></i></div>
+          <span>Kitchen</span>
+        </div>
+        <div class="zone-item">
+          <div class="zone-icon"><i class="fa-solid fa-tree"></i></div>
+          <span>Outdoor</span>
+        </div>
+      </div>
+
+      <!-- Main Status -->
+      <section class="main-status-section">
+        <div class="header-row">
+          <h2>Air Quality Index</h2>
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        
+        <div class="main-card gradient-bg" id="aqi-card">
+          <div class="main-card-content">
+            <div class="value-display">
+              <span class="large-value" id="aqi-val">--</span>
+              <span class="status-label" id="aqi-status">Detecting...</span>
+            </div>
+            <!-- Animated decorative element resembling the glowing sphere from the image -->
+            <div class="glow-sphere" id="aqi-glow"></div>
+          </div>
+          <div class="card-footer">
+            <span class="footer-label">Monitoring</span>
+            <label class="toggle-switch">
+              <input type="checkbox" checked id="monitor-toggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Smart Devices / Sensors Grid -->
+      <section class="sensors-grid">
+        <div class="header-row">
+          <h2>Environment Sensors</h2>
+        </div>
+        
+        <div class="grid-container">
+          
+          <!-- Humidity Sensor -->
+          <div class="sensor-card">
+            <div class="card-top">
+              <div class="sensor-icon blue"><i class="fa-solid fa-droplet"></i></div>
+            </div>
+            <div class="card-body">
+              <h3>Humidity</h3>
+              <div class="sensor-reading">
+                <span id="humidity-val">--</span>%
+              </div>
+            </div>
+            <div class="card-bottom">
+              <span>Status</span>
+              <label class="toggle-switch small">
+                <input type="checkbox" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Moisture Sensor -->
+          <div class="sensor-card">
+            <div class="card-top">
+              <div class="sensor-icon purple"><i class="fa-solid fa-water"></i></div>
+            </div>
+            <div class="card-body">
+              <h3>Soil Moisture</h3>
+              <div class="sensor-reading">
+                <span id="moisture-val">--</span>%
+              </div>
+            </div>
+            <div class="card-bottom">
+              <span>Auto-Water</span>
+              <label class="toggle-switch small">
+                <input type="checkbox">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Air Purifier (Actuator based on AQI) -->
+          <div class="sensor-card">
+            <div class="card-top">
+              <div class="sensor-icon green"><i class="fa-solid fa-fan"></i></div>
+            </div>
+            <div class="card-body">
+              <h3>Air Purifier</h3>
+              <div class="sensor-reading">
+                <span id="purifier-status">Standby</span>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <span>Power</span>
+              <label class="toggle-switch small">
+                <input type="checkbox" id="purifier-toggle">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Temperature (Added for completeness) -->
+          <div class="sensor-card">
+            <div class="card-top">
+              <div class="sensor-icon orange"><i class="fa-solid fa-temperature-half"></i></div>
+            </div>
+            <div class="card-body">
+              <h3>Temperature</h3>
+              <div class="sensor-reading">
+                <span id="temp-val">24</span>°C
+              </div>
+            </div>
+            <div class="card-bottom">
+              <span>AC Sync</span>
+              <label class="toggle-switch small">
+                <input type="checkbox" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts-section">
+        <div class="header-row">
+          <h2>AQI Trend</h2>
+        </div>
+        <div class="chart-card">
+          <div class="chart-wrapper">
+            <canvas id="aqiChart"></canvas>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
